@@ -1,4 +1,5 @@
 import express from 'express';
+import QRCode from 'qrcode';
 import { upload } from '../middlewares/multer.middleware';  // Ensure path is correct
 import { uploadOnCloudinary } from '../utils/cloudinary';  // Ensure path is correct
 
@@ -13,7 +14,17 @@ router.post('/upload', upload.single('file'), async (req: express.Request, res: 
 
     try {
         const result = await uploadOnCloudinary(localFilePath, res);
-        return res.json({ message: 'File uploaded successfully', url: result });
+        let url = result.toString();
+        if (url.endsWith('.pdf')) {
+            url = url.replace('.pdf', '.jpg');
+        }
+        const qrCodeData = await QRCode.toDataURL(url);
+
+        return res.json({ 
+            message: 'File uploaded successfully', 
+            url: url,
+            qrCode: qrCodeData});
+
     } catch (error) {
         return res.status(500).json({ message: 'Error uploading file to Cloudinary', error });
     }
