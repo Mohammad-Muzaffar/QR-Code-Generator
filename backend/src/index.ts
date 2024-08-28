@@ -12,7 +12,7 @@ app.use(cors());  // Enable CORS
 app.use(express.json());  // To parse JSON bodies if needed
 
 // Set base path for routes
-app.use('/api/v1/files', rootRouter);
+app.use('/api/v1', rootRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello, TypeScript Node Express!');
