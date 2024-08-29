@@ -9,7 +9,7 @@ export const AppBar = () => {
                     <img src={logo} alt="Logo"/>
                 </div>
             </Link>
-                <div className="m-5 font-medium">
+                <div className="m-5 font-medium hover:text-slate-700">
                     QR Generator
                 </div>
         </div>
