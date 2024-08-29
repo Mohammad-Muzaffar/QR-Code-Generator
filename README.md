@@ -50,3 +50,7 @@ The frontend application should now be running in development mode. You can acce
 Ensure that both backend and frontend services are running to fully interact with the QR Generator application.
 
 The backend API and frontend application are expected to be run concurrently, so be sure to start both servers.
+
+### Screen Shot
+
+![alt text](https://github.com/Mohammad-Muzaffar/QR-Code-Generator/blob/main/frontend/src/assets/SS.png)
