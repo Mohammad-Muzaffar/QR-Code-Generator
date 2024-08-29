@@ -18,4 +18,7 @@ Follow these steps to set up and run both the backend and frontend components.
    cd backend
 2. Install the necessary dependencies:
  ```bash
-  npm install
+   npm install
+3. Build the backend project:
+```bash
+   npm run build
