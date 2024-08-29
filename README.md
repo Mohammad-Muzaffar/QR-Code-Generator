@@ -20,12 +20,18 @@ Follow these steps to set up and run both the backend and frontend components.
 2. Install the necessary dependencies:
     ```bash
    npm install
-
-3. Build the backend project:
+    
+3. Creat a `.env` file with these environment variables and also signup on `Cloudinary`:
+    ```bash
+    CLOUD_NAME = "Your Cloudinary Cloud Name"
+   API_KEY = "Your API Key from Cloudinary"
+   API_SECRET = "Your API Secret from Cloudinary"
+      
+4. Build the backend project:
    ```bash
    npm run build
 
-4. Start the backend server:
+5. Start the backend server:
    ```bash
    npm run start
 
